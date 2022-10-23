@@ -1,0 +1,63 @@
+@import "variables";
+
+@mixin size($width, $height){
+    height: $height;
+    width: $width;
+}
+
+@mixin pad-marg($padding, $margin){
+    padding: $padding;
+    margin: $margin;
+}
+
+.principio-uno{
+    /*SLIDER-manual-stilos*/
+    margin-top: 105px;
+}
+
+.container-slider{
+    @include size(100%,180px );
+    min-width: 300px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+    .slider{
+        display: flex;
+        @include size(300%,180px );
+        margin-left: -100%;
+    }
+    .slider__section{
+        @include size(300%,180px );
+    }
+    .slider__img{
+        display: block;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.slider__btn{
+    position: absolute;
+    @include size(25px,25px );
+    top: 50%;
+    color: #666;
+    transform: translateY(-50%);
+    font-size: 20px;
+    font-weight: bold;
+    font-family: monospace;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+    background: none;
+    
+    /*fin-SLIDER*/
+
+}
+.slider__btn--left{
+    left: 10px;
+}
+
+.slider__btn--right{
+    right: 10px;
+}

@@ -1,0 +1,40 @@
+@import "variables";
+
+@mixin size($width, $height){
+    height: $height;
+    width: $width;
+}
+
+@mixin pad-marg($padding, $margin){
+    padding: $padding;
+    margin: $margin;
+}
+
+.section-cont{
+    display: flex;
+    justify-content: center;
+}
+.contenedor1{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+.conta__texto{
+    margin: 20px 70px;
+    width: 300px;
+    padding: 60px 0px;
+    h3{
+        line-height: 1.25;
+        font-size: 20px;
+        color: #4B4B4B;
+    }
+    p{
+        line-height: 1.25;
+        margin-top: 10px;
+        font-size: 15px;
+        color: #1A1A1A;
+    }
+}
+

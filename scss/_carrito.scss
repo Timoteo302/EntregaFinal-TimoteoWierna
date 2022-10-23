@@ -1,0 +1,51 @@
+
+@import "variables";
+
+@mixin size($width, $height){
+    height: $height;
+    width: $width;
+}
+
+@mixin pad-marg($padding, $margin){
+    padding: $padding;
+    margin: $margin;
+}
+
+
+@mixin flex-1($justifi-content){
+    display: flex;
+    justify-content: $justifi-content;
+    align-items: center;
+}
+
+/*carrito*/
+.cont-carrito{
+    @include flex-1(center);
+    height: 600px;
+    text-align: center;
+    .cont-carrito__texto{ 
+        padding: 10px 30px 20px 30px;
+        h4{
+            color: #666;
+            margin-bottom: 20px;
+            font-size: 20px;
+            font-weight: inherit;
+        }
+        p{
+            color: #999;
+            font-weight: inherit;
+            font-size: 15px;
+            line-height: 1.45;
+            margin-bottom: 10px;
+        }
+        span{
+            font-size: 14px;
+        }
+        span a {
+            color: #3283a8;
+        }
+    }
+    
+}
+
+/*carrito*/

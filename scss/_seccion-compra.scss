@@ -1,0 +1,78 @@
+@import "variables";
+
+@mixin size($width, $height){
+    height: $height;
+    width: $width;
+}
+
+@mixin pad-marg($padding, $margin){
+    padding: $padding;
+    margin: $margin;
+}
+
+
+@mixin flex-1($justifi-content){
+    display: flex;
+    justify-content: $justifi-content;
+    align-items: center;
+}
+
+/*SECCION-COMPRA-css*/
+/*producto-compra*/
+.container-compra{
+    padding: 40px 6px 30px 6px;
+    @include flex-1(center);
+    flex-direction: column;
+    text-align: center;
+    color: $black;
+}
+.compra{
+    padding-top: 85px; 
+    .compra__img img{
+        @include size(200px,200px );
+        object-fit: cover;
+    
+    }
+}
+
+.compra__texto{
+    h3{
+        font-size: 1.4em;
+        padding: 10px 0px 0px 0px;
+    }
+    p{
+        padding-bottom: 15px;
+    }
+    .botones-mas-menos{
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 20px 10px 20px;
+        border: 1px solid $black;
+        outline: none;
+        padding: 3px;
+        border-radius: 5px;
+    }
+}
+
+.boton-agregar{
+    display: flex;
+    justify-content: center;
+    
+    .cont__boton{
+        
+        margin-top: 5px;
+        width: 300px;
+        height: 40px;
+        padding: 10px;
+        font-size: 15px;
+        border-radius: 10px;
+        border: 1px solid $black;
+    }
+    .button__texto{
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+/*fin-producto-compra*/
+/*fin-SECCION-COMPRA-css*/

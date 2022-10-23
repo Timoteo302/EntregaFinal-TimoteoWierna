@@ -1,0 +1,86 @@
+@mixin size($width, $height){
+    height: $height;
+    width: $width;
+}
+
+@mixin pad-marg($padding, $margin){
+    padding: $padding;
+    margin: $margin;
+}
+
+
+@mixin flex-1($justifi-content){
+    display: flex;
+    justify-content: $justifi-content;
+    align-items: center;
+}
+
+@import "variables";
+
+/*incio-de-las-redes*/
+.final{
+    @include flex-1(center);
+    text-align: center;
+    padding: 20px 0px;
+    color: $white;
+    margin-top: 35px;
+    text-align: start;
+    line-height: 24px;
+    background-color: $black;
+    a{
+        text-decoration: none;
+    }
+    h4{
+        text-align: center;
+    }
+    .container h4{
+        padding: 12px 0px 5px 0px;
+        font-weight: 550;
+    }
+    .container ul li a{
+        color: $white;
+    }
+    .cont__iconos h4{
+        line-height: 10px;
+        margin: 5px;
+        font-size: 0.9em;
+    }  
+    .cont__iconos a{
+        color: $white;
+        font-size: 25px;
+        margin: 5px 0px 5px 0px;
+    }
+    .cont__iconos a:hover{
+        border-bottom: 2px solid $black;
+        transition: border-bottom .2s ease-in-out;
+    } 
+    .center{
+        text-align: center;
+    }
+    
+    .iconos{
+        margin: 5px;
+    }
+    .iconos i{
+        margin: 0px 3px 0px 3px;
+    } 
+}
+
+.cont__texto , .cont__texto2{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    ul li{
+        font-size: 13px;
+    }
+    
+}
+.cont__texto2{
+    .texto{
+        border-top: 1px solid $white;
+    }
+}
+
+.cont__contacto i:hover{
+    background-color: rgb(150, 150, 150);
+}
+/*fin-del-las-redes*/

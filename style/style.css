@@ -1,0 +1,1563 @@
+*{
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.texto-pr{
+    color: #fff;
+    font-size: 9px;
+    text-align: center;
+    background-color: #333333;
+    padding: 8px;
+    margin: 0px;
+    height: 35px;
+}
+
+.header1{
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    z-index: 20;
+}
+.header1 a{
+    text-decoration: none;
+}
+
+
+.cont-menu{
+    display: flex;
+    height: 70px;
+    width: 85%;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: center; 
+}
+
+
+
+.logo{
+    margin: 0px;
+}
+/*h1*/
+.logo a{
+    font-size: 1.1em;
+    font-weight: 1000;
+    color: #fff;
+    text-decoration: none;
+}
+
+.buscar-mo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buscar-mo input{
+    width: 100px;
+    height: 30px;
+    font-size: 14px;
+    border: 1px solid #d7d7d7;
+    border-radius: 4px;
+    outline: none;
+
+}
+.buscar input:focus{
+    border: 2px solid #23608f ;
+}
+
+.btn{
+    color: silver;
+    right: 0;
+    padding: 2px 4px 4px 4px;
+    height: 30px;
+    top: 0;
+    cursor: pointer;
+    left: 80%;
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid silver;
+}
+.btn i{
+    font-size: 13px;
+}
+
+.cart i{
+    font-size: 17px;
+    color: #fff;
+    margin-left: 10px;
+}
+
+.label-img{
+    width: 22px;
+}
+/*menu hamburguesa*/
+.nav__label{
+    filter: invert(40%);
+    display: block;
+    cursor: pointer;
+}
+.label-img{
+    filter: invert();
+}
+
+/*parte para que aparezca y desaparezca el menu*/
+.nav__menu{
+    position: fixed;
+    top: 80px;
+    bottom: 0;
+    background-color: #000;
+    /* border-bottom: 2px solid #333333; */
+    border-top: 2px solid #333333;
+    width: 100%;
+    left: 0;
+    display: flex;
+    height: 40%;
+    flex-direction: column;
+    align-items: flex-end;
+    /* clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 0);
+    transition: clip-path 0.4s ease-out; */
+    transform: translateY(1500%); 
+    transition: transform 0.5s;
+    border-radius: 6px;
+}
+.nav__input:checked + .nav__menu{
+    /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); */
+    transform: translateY(122%);
+    
+}
+.nav__input{
+    display: none;
+}
+
+.nav__item{
+    padding: 15px 0px 9px 8px;
+    width: 100%;
+    color: #fff;
+}
+
+
+.header2{
+    display: none;
+}
+/*fin del nav.*/
+
+
+
+
+
+/*SLIDER-manual-stilos*/
+
+
+.principio-uno{
+    margin-top: 105px;
+}
+.container-slider{
+    width: 100%;
+    min-width: 300px;
+    height: 180px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+}
+
+.slider{
+    display: flex;
+    width: 300%;
+    height: 180px;
+    margin-left: -100%;
+}
+
+.slider__section{
+    width: 100%;
+    height: 180px;
+}
+
+.slider__img{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.slider__btn{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    /* background-color: rgba(255, 255, 255, 0.3); */
+    top: 50%;
+    color: #666;
+    transform: translateY(-50%);
+    font-size: 20px;
+    font-weight: bold;
+    font-family: monospace;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+    background: none;
+}
+
+.slider__btn--left{
+    left: 10px;
+}
+
+.slider__btn--right{
+    right: 10px;
+}
+
+/*fin-SLIDER*/
+
+
+
+
+/*SLIDER-2222222222-manual-stilos*/
+
+
+/* .container-slider2{
+    width: 100%;
+    min-width: 300px;
+    height: 250px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+}
+
+.slider2{
+    display: flex;
+    width: 600%;
+    height: 250px;
+    margin-left: -100%;
+}
+
+.slider__section2{
+    width: 100%;
+    height: 200px;
+}
+
+.slider__img{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.slider__btn{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    /* background-color: rgba(255, 255, 255, 0.3); */
+    /* top: 50%;
+    color: #666;
+    transform: translateY(-50%);
+    font-size: 20px;
+    font-weight: bold;
+    font-family: monospace;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider__btn:hover{
+    /* background-color: #fff; */
+    /* background-color: rgba(255, 255, 255, 0.1);
+}
+
+.slider__btn--left{
+    left: 10px;
+}
+
+.slider__btn--right{
+    right: 10px;
+} */
+
+/*fin-SLIDER-2222222222222*/
+
+
+
+
+
+
+
+
+/*inicio-de-todas-las-img*/
+.container-bebidas{
+    margin-top: 25px;
+    text-align: center;
+    color: #000;
+}
+.container-bebidas a{
+    text-decoration: none;
+}
+
+.cont-img__cerveza{
+    display: grid;
+    grid-template-rows: repeat(2, 270px);
+    grid-template-columns: repeat(2 ,minmax(30px,1fr));
+    justify-items: center;
+    align-items: center;
+}
+.cont__bebidas  a img{
+    height: 150px;
+    object-fit: cover;
+}
+.cont__bebidas{
+    padding: 3px; 
+    margin-right: 3px;
+    margin-left: 3px;
+    padding-bottom: 13px;
+    margin-bottom: 5px;
+    
+}
+
+.cont__bebidas:hover{
+    border-bottom: 2px solid silver;
+}
+
+.beb-desktop{
+    display: none;
+}
+
+/*texto de la bebida*/
+.cont__bebidas p , .cont__bebidas h4{
+    color: #000;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    font-size: 17px;
+}
+
+.textos{
+    display: flex;
+    flex-direction: column;
+    float: left;
+    text-align: start;
+    align-items: flex-start;
+}
+.precio-viejo{
+    text-align: start;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.precio-viejo p{
+    color: #666;
+    text-decoration: line-through;
+    line-height: 0;
+    margin-bottom: 5px;
+}
+.precio-viejo i{
+    color: rgb(4, 247, 53);
+    position: absolute;
+    right: 9px;
+    top: 155px;
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    text-align: center;
+}
+.descripcion span{
+    font-size: 11px;
+    color: #666;
+    line-height: 1.3;
+}
+.precios{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: start;
+    float: left;
+    
+}
+.precios p{
+    font-size: 30px;
+    font-weight: 600;
+    margin: 0px;
+    margin-right: 10px;
+    padding-bottom: 0px;
+}
+.precios span{
+    background-color: #000;
+    color: #fff;
+    font-size: 11px;
+    line-height: 0;
+    font-weight: 600;
+    padding: 14px 2px;
+    height: 20px;
+}
+
+
+.titulo{
+    display: flex;
+    justify-content: center;
+    margin: 10px 0px 15px 0px;
+    font-weight: 100;
+    color: #b9b9b9;
+    font-size: 9px;
+    align-items: center;
+}
+
+.titulo h2{
+    padding-right: 3px;
+    padding-left: 3px;
+    font-size: 12px;
+    margin-bottom: 0px;
+}
+.titulo i{
+    font-size: 1.2em;
+}
+/*fin-de-todas-las-img*/
+
+
+
+
+/*incio-de-las-redes*/
+.final{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 20px 0px;
+    color: #fff;
+    margin-top: 35px;
+    text-align: start;
+    line-height: 24px;
+    background-color: #000;
+}
+.final a{
+    text-decoration: none;
+}
+.final h4{
+    text-align: center;
+}
+.cont__iconos h4{
+    line-height: 10px;
+    margin: 5px;
+    font-size: 0.9em;
+}
+.texto{
+    border-top: 1px solid #fff;
+}
+
+.iconos{
+    margin: 5px;
+}
+.iconos i{
+    margin: 0px 3px 0px 3px;
+}
+
+.center{
+    text-align: center;
+}
+
+.cont__texto , .cont__texto2{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.cont__texto ul li, .cont__texto2 ul li{
+    font-size: 13px;
+}
+
+
+
+.container ul li a{
+    color: #fff;
+}
+.texto-wpp{
+    font-weight: 100;
+}
+
+
+.container h4{
+    padding: 12px 0px 5px 0px;
+    font-weight: 550;
+}
+
+.cont__iconos a{
+    color: #fff;
+    font-size: 25px;
+    margin: 5px 0px 5px 0px;
+}
+.cont__iconos a:hover{
+    border-bottom: 2px solid #000;
+    transition: border-bottom .2s ease-in-out;
+    background-color: silver;
+}
+.cont__contacto i:hover{
+    background-color: rgb(150, 150, 150);
+}
+/*fin-del-las-redes*/
+
+
+
+/*footer*/
+.pie{
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    
+}
+.footer__container{
+    height: 40px;
+    align-items: flex-end;
+
+}
+.footer__p{
+    color: rgb(150, 150, 150);
+    padding: 8px;
+}
+
+
+
+
+
+/*PARTE-DE-LA-PAGINA-'CONTACTO'----------*/
+/*Contactános*/
+.contactanos{
+    padding-bottom: 20px;
+    margin: 0px 10px 0px 10px;
+    margin-top: 140px;
+}
+.contactanos h4{
+    text-align: center;
+    color: #000;
+    margin: 15px 0px 10px 0px;
+    font-size: 18px;
+}
+
+.flex-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0px;
+    padding: 0px;
+    flex-wrap: wrap;	
+}
+
+.form{
+    width: 300px;
+    color: #000;
+}
+
+.form__section{
+    padding-top: 15px;  
+}
+
+.form__input{
+    width: 100%;
+	padding: 7px;
+	margin: 5px 0;
+    border: none;
+    border: 1px solid #9ea2a3;   
+}
+
+.form__input:focus{
+	outline: none;
+    background-color: #fff;
+}
+
+.form textarea{
+	min-height: 100px;
+	resize: none;
+}
+
+.form input[type="submit"]{
+    background-color: #3283a8;
+	color: #fff;
+	padding: 5px;
+    border-radius: 10px;
+    border: none;
+    width: 180px;
+    
+}
+.form input[type="submit"]:hover{
+    background-color: #236887;
+}
+/*fin-del-form*/
+
+
+/*comunicar*/
+.comunicar{
+    margin: 0px 20px 0px 20px;
+    padding-left: 0px;
+    display: flex;
+    justify-content: start;
+}
+.container-com h4{
+    margin: 16px 0px 20px 0px;
+    text-align: start;
+}
+.container-com label{
+    font-size: 12px;
+    color: rgb(150,150,150);
+}
+.container-com p{
+    margin: 3px 0px 24px 0px;
+}
+/*fin-comunicar*/
+
+/*FIN-DE-'CONTACTO'.-------------*/
+
+
+
+
+/*SECCION-COMPRA-css*/
+/*producto-compra*/
+.container-compra{
+    padding: 40px 6px 30px 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #000;
+    
+}
+.compra__img img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+
+}
+.compra{
+    padding-top: 85px; 
+}
+.compra__texto h3{
+    font-size: 1.4em;
+    padding: 10px 0px 0px 0px;
+}
+.compra__texto p{
+    padding-bottom: 15px;
+}
+
+.botones-mas-menos{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 20px 10px 20px;
+    border: 1px solid #000;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+
+.boton-agregar{
+    display: flex;
+    justify-content: center;
+}
+.cont__boton{
+    margin-top: 5px;
+    width: 300px;
+    height: 40px;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 10px;
+    border: 1px solid #000;
+}
+.button__texto{
+    display: flex;
+    justify-content: space-between;
+}
+/*fin-producto-compra*/
+/*fin-SECCION-COMPRA-css*/
+
+
+/*SECCION-NOSOTROS*/
+/*contamos-sobre-nosotros*/
+.container2{
+    margin-top: 120px;
+    color: #000;
+}
+.nosotros{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    padding: 15px 10px 15px 10px;
+}
+.cont-nos h1{
+    font-size: 1.4em;
+    padding-bottom: 15px;
+    font-weight: 100;
+    text-align: center;
+}
+.nos__texto{
+    text-align: start;
+}
+.cont-nos p{
+    line-height: 23px;
+    font-size: 15px;
+    padding-bottom: 15px;
+}
+.nos__img img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+/*fin-nosotros*/
+/*FIN-SECCION-NOSOTROS*/
+
+
+
+
+
+
+/*SECCION-BEBIDAS*/
+
+/*productos*/
+.container-productos{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: #000;
+    margin-top: 120px;
+}
+
+.cont-img{
+    display: grid;
+    grid-template-rows: repeat(5, 270px);
+    grid-template-columns: repeat(2 ,minmax(30px,1fr));
+    justify-items: center;
+    align-items: center;
+}
+.cont__cervezas{ 
+    padding: 3px; 
+    margin-right: 3px;
+    margin-left: 3px;
+    padding-bottom: 13px;
+    margin-bottom: 5px;
+    position: relative;
+}
+.cont__cervezas  a img{
+    height: 150px;
+    object-fit: cover;
+}
+
+/*texto de la bebida*/
+.cont__cervezas p , .cont__cervezas h4{
+    color: #000;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    font-size: 17px;
+}
+.precios p{
+    font-size: 30px;
+}
+.precio-viejo p{
+    color: #666;
+}
+
+/*fin-productos*/
+
+/*SECCION-BEBIDAS-FIN*/
+
+
+
+
+
+/*carrito*/
+.cont-carrito{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+    text-align: center;
+    
+}
+.cont-carrito__texto{ 
+    padding: 10px 30px 20px 30px;
+}
+.cont-carrito__texto h4{
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: inherit;
+}
+.cont-carrito__texto p{
+    color: #999;
+    font-weight: inherit;
+    font-size: 15px;
+    line-height: 1.45;
+    margin-bottom: 10px;
+}
+.cont-carrito__texto span{
+    font-size: 14px;
+}
+.cont-carrito__texto span a {
+    color: #3283a8;
+}
+/*carrito*/
+
+
+
+/*mediaqueris*/
+@media screen and (min-width:768px){
+    .nav__label{
+        display: none;
+    }
+    
+    .header1{
+        display: none;
+    }
+
+
+    /*nav2-inicio-nombre-de-las-bebidas*/
+    .nav-cont2{
+        display: flex;
+        padding-top: 85px;
+        padding-right: 0px;
+        margin-bottom: 2px;
+        justify-content: center;
+        text-align: center;
+    }
+    .nav__ul{
+        padding-bottom: 5px;
+        padding-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .nav__items{
+        line-height: 22px;
+        border-radius: 10px;
+        border: 2px solid #000;
+        width: 90px;
+        height: 25px;
+        font-size: 12px;
+        background-color: #000;
+    }
+    .nav__items:hover{
+        transform: scale(1.1);
+        transition: transform .2s;
+    }
+    .item1:hover{
+        background-image: url(../assets/cerveza.png);
+        background-position: center;
+        background-size: cover;
+    }
+
+    .item2:hover{
+        background-image: url(../assets/coca.png);
+        background-position: center;
+        background-size: cover;
+    }
+    .item3:hover{
+        background-image: url(../assets/descarga.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+
+    .item4:hover{
+        background-image: url(../assets/descarga3.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    .item5:hover{
+        background-image: url(../assets/descarga4.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    .item6:hover{
+        background-image: url(../assets/descarga5.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    .nav__items a{
+        color: #fff;
+    }
+    /*fin-de-inicio-nav*/
+
+    
+
+    /*header2-desktop*/
+
+    .nav__ul li a{
+        text-decoration: none;
+    }
+    .nav__upp a{
+        text-decoration: none;
+    }
+    .texto-pr{
+        color: #fff;
+        font-size: 10px;
+        text-align: center;
+        background-color: #333333;
+        padding: 8px;
+        margin: 0px;
+    }
+    .header2{
+        display: block;
+        background-color: #000;
+        width: 100%;
+        min-height: 70px;
+    }
+    
+    .buscar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .buscar input{
+        width: 400px;
+        height: 40px;
+        padding: 0px 15px;
+        font-size: 14px;
+        border: 1px solid #d7d7d7;
+        border-radius: 4px;
+        outline: none;
+        margin-left: 70px;
+
+    }
+    .buscar input:focus{
+        border: 2px solid #23608f ;
+    }
+
+    .btn{
+        color: silver;
+        right: 0;
+        height: 40px;
+        top: 0;
+        cursor: pointer;
+        left: 70%;
+        background-color: #fff;
+        border-radius: 4px;
+        border: 1px solid silver;
+    }
+    .btn i{
+        padding: 5px 5px 5px 5px;
+        line-height: 2;
+    }
+
+    .cart i{
+        font-size: 19px;
+    }
+    .nav__upp{
+        display: flex;
+        color: #000;
+        background-color: #000;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding-top: 12px;
+    }
+    
+    nav a{
+        padding: 10px;
+        font-weight: bold;
+        color: #fff;
+    }
+    
+    nav a:hover{
+        color: #bfbfbf;
+    }
+    .logo:hover{
+        color: #bfbfbf;
+    }
+    .logo2{
+        font-size: 1.4em;
+        padding-bottom: 5px;
+        margin-left: 40px;
+        font-weight: 1000;
+        padding: 3px;
+        color: #fff;
+    }
+    .logo2 p{
+        border-bottom: 2px solid #fff;
+        border-radius: 10px;
+    }
+    .nav__item{
+        color: #fff;
+    }
+    
+    
+    /*nav2-inicio-nombre-de-las-bebidas*/
+    .nav-cont2{
+        padding: 0px;
+        margin: 0px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+    .nav__ul{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .nav__items{
+        margin: 4px;
+    }
+    /*fin-de-inicio-nav*/
+
+
+
+
+    /*inicio-de-todas-las-img------------*/ /*PRIMEROOOOOOOOOOOO*/
+    .container-bebidas{
+        text-align: center;
+        color: #000;
+    }
+    .container-bebidas a{
+        text-decoration: none;
+    }
+    .contenedor-final2, .contenedor-final3, .contenedor-final4, .contenedor-final5, .contenedor-final6{
+        padding-top: 20px;
+    }
+
+    .beb-desktop{
+        display: block;
+    }
+    .cont-img__cerveza{
+        display: flex;
+        justify-content: center;
+    }
+    .cont__bebidas  a img{
+        height: 224px;
+        width: 224px;
+        object-fit: cover;
+    }
+    .cont__bebidas{
+        padding: 10px; 
+        margin-right: 10px;
+        margin-left: 10px;
+        border: none;
+        width: 200px;
+        padding: 0px;
+        position: relative;
+    }
+    .cont__bebidas:hover{
+        border-bottom: 2px solid silver;
+    }
+    /*texto de la bebida*/
+    .cont__bebidas p , .cont__bebidas h4{
+        color: #000;
+        padding: 0px;
+        margin: 0px;
+        font-size: 17px;
+    }
+
+    .textos{
+        display: flex;
+        flex-direction: column;
+        float: left;
+        text-align: start;
+        align-items: flex-start;
+        width: 180px;
+        padding: 10px;
+    }
+    .precio-viejo{
+        text-align: start;
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+    }
+    .precio-viejo p{
+        color: #666;
+        text-decoration: line-through;
+        line-height: 0;
+        margin-bottom: 5px;
+    }
+    .precio-viejo i{
+        color: rgb(4, 247, 53);
+        position: absolute;
+        right: 10px;
+        top: 240px;
+        height: 36px;
+        width: 36px;
+        border-radius: 50%;
+    }
+    .descripcion span{
+        font-size: 14px;
+        color: #666;
+        line-height: 1.3;
+    }
+    .precios{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: start;
+        float: left;
+        
+    }
+    .precios p{
+        font-size: 30px;
+        font-weight: 600;
+        margin-right: 10px;
+    }
+    .precios span{
+        background-color: #000;
+        color: #fff;
+        font-size: 11px;
+        line-height: 0;
+        font-weight: 600;
+        padding: 14px 2px;
+        height: 20px;
+    }
+
+    .titulo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 13px;
+        margin: 10px 0px 25px 0px;
+        font-weight: 100;
+    }
+    .titulo h2{
+        font-size: 15px;
+        font-weight: 600;
+        padding-right: 6px;
+        margin-bottom: 0px;
+    }
+    .titulo i{
+        font-size: 1.1em;
+    }
+
+    /*fin-de-todas-las-img*/
+
+    
+
+    /*principio'delivery-bebidas'*/
+    .principio{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        
+    }
+    .nombre{
+        font-size: 1.3em;
+        padding-top: 10px;
+        line-height: 1px;
+        font-weight: 1000;
+        border-bottom: 5px solid #fff;
+        text-shadow: 3px 3px 4px #000;
+    }
+    .principio-cont img{
+        border-radius: 15px;
+        padding: 10px;
+        width: 500px;
+        height: 300px;
+        
+    }
+    img{
+        justify-content: center;
+    }
+    /*fin-de-principio'delivery-bebidas'*/
+
+
+
+    /*incio-de-las-redes*/
+
+    .cont__texto2{
+        display: grid;
+        grid-template-rows: repeat(1, 100px);
+        grid-template-columns: repeat(2 ,minmax(30px,1fr));
+        justify-items:center;
+        align-items: center;
+        gap: 250px;
+        padding-top: 20px;
+    }
+    .final a{
+        text-decoration: none;
+    }
+    .final{
+        display: flex;
+        justify-content: center;
+        text-align: start;
+        padding: 20px 0px;
+        margin-top: 35px;
+        line-height: 24px;
+    }
+
+    .cont__texto , .cont__texto2{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 20px;
+    }
+    .cont__texto ul li, .cont__texto2 ul li{
+        font-size: 15px;
+    }
+
+    .texto{
+        border-top: none;
+    }
+
+    .texto-wpp{
+        font-weight: 100;
+    }
+
+
+    .container h4{
+        padding: 12px 0px 5px 0px;
+        font-weight: 550;
+        text-align: center;
+    }
+
+    .cont__iconos a{
+        color: #fff;
+        font-size: 25px;
+        margin: 5px 0px 5px 0px;
+    }
+    .cont__iconos a:hover{
+        border-bottom: 2px solid #fff;
+        transition: border-bottom .2s ease-in-out;
+    }
+    /*fin-del-las-redes*/
+
+
+
+    /*SLIDER*/
+
+
+    .principio-uno{
+        display: block;
+        padding: 0px;
+        margin: 0px;
+    }
+        
+    .container-slider{
+        margin: 0px auto;
+        overflow: hidden;
+        position: relative;
+        min-height: 300px;
+        margin-bottom: 40px;
+    }
+    
+    .slider{
+        display: flex;
+        width: 300%;
+        height: 300px;
+        margin-left: -100%;
+    }
+    
+    .slider__section{
+        width: 100%;
+    }
+    .slider__section img{
+        height: 300px;
+        width: 100%;
+    }
+
+    .slider__img{
+        display: block;
+    }
+    
+    .slider__btn{
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        /* background-color: rgba(255, 255, 255, 0.2); */
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 25px;
+        font-weight: bold;
+        font-family: monospace;
+        text-align: center;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    
+    
+    .slider__btn--left{
+        left: 10px;
+    }
+    
+    .slider__btn--right{
+        right: 10px;
+    }
+
+    
+    
+
+
+
+
+
+    /*PARTE-DE-LA-PAGINA-'CONTACTO'----------*/
+      /*Contactános*/
+      .contactanos{
+        padding-top: 10px;
+        padding-bottom: 20px;
+        margin: 48px 330px 32px 330px;
+        
+    }
+    .contactanos h4{
+        text-align: start;
+        color: #000;
+        margin: 15px 0px 10px 0px;
+        font-size: 1.4em;
+    }
+    
+    .flex-container{
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        margin: 0px;
+        padding: 0px;
+        flex-wrap: wrap;	
+    }
+    
+    .form{
+        width: 500px;
+        color: #000;
+    }
+    
+    .form__section{
+        padding-top: 15px;  
+    }
+    
+    .form__input{
+        width: 100%;
+        padding: 15px;
+        margin: 10px 0;
+        border: none;
+        border: 1px solid #9ea2a3;
+        border-radius: 10px;
+    }
+    
+    .form__input:focus{
+        outline: none;
+        background-color: #fff;
+    }
+    
+    .form textarea{
+        min-height: 100px;
+        resize: none;
+    }
+
+    .form input[type="submit"]{
+        background-color: #3283a8;
+        color: #fff;
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+        width: 250px;
+        cursor: pointer;
+    }
+    .form input[type="submit"]:hover{
+        background-color: #236887;
+    }
+    /*fin-del-form*/
+    
+    
+    /*comunicar*/
+    .comunicar{
+        margin: 20px 330px 32px 330px;
+        display: flex;
+        justify-content: start;
+        padding: 0px;
+    }
+    .container-com h4{
+        margin: 16px 0px 20px 0px;
+        font-size: 1.4em;
+    }
+    .container-com label{
+        font-size: 14px;
+        color: rgb(150,150,150);
+    }
+    .container-com p{
+        margin: 3px 0px 24px 0px;
+        font-size: 24px;
+        color: rgb(67, 67, 67);
+    }
+    /*fin-comunicar*/
+
+    /*FIN-DE-'CONTACTO'.-------------*/
+
+
+    /*SECCION-COMPRA-------------*/
+    /*producto-compra*/
+    .container-compra{
+        padding: 40px 6px 30px 6px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: start;
+        color: #000;
+
+        
+    }
+    .compra__img img{
+        width: 300px;
+        height: 300px;
+    }
+
+    .compra{
+        padding-top: 70px; 
+        display: flex;
+        flex-direction: row;
+    
+    }
+    .compra__texto{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin-left: 10px;
+    }
+    .compra__texto h3{
+        font-size: 1.7em;
+        font-weight: 1000;
+        padding: 10px 0px 0px 0px;
+        max-width: 500px;
+    }
+    .compra__texto p{
+        padding-bottom: 15px;
+        font-size: 17px;
+    }
+
+    .botones-mas-menos{
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 0px 10px 0px;
+        border: 3px solid #000;
+        padding: 2px;
+        width: 300px;
+    }
+
+
+    .boton-agregar{
+        display: flex;
+        justify-content: center;
+    }
+    .cont__boton{
+        margin-top: 5px;
+        width: 300px;
+        height: 40px;
+        padding: 10px;
+        font-size: 15px;
+        font-weight: bold;
+        border-radius: 10px;
+        border: 1px solid #000;
+    }
+    .button__texto{
+        display: flex;
+        justify-content: space-between;
+    }
+    /*fin-producto-compra*/
+    /*FIN-SECCION.COMPRA---------*/
+
+
+    /*SECCION-NOSOTROS*/
+    /*nostros*/
+    .container2{
+        padding-top: 90px;
+        color: #000;
+        text-align: center;
+    }
+    .nosotros{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 15px 5px 60px 5px;
+    }
+    .cont-nos h1{
+        font-size: 1.7em;
+        padding-bottom: 15px;
+        font-weight: 100;
+    }
+    .cont-nos p{
+        max-width: 500px;
+        line-height: 23px;
+        font-size: 16px;
+        padding-bottom: 15px;
+    }
+    .cont-nos{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .nos__img img{
+        width: 400px;
+        height: 350px;
+        object-fit: cover;
+        margin-left: 40px;
+    }
+    /*fin-nosotros*/
+    /*FIN-SECCION-NOSOTROS*/
+
+
+
+    /*SECCION-BEBIDAS*/
+
+     /*productos*/
+     .container-productos{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        color: #000;
+        padding: 50px;
+        margin-top: 20px;
+        padding-top: 0px;
+        margin-bottom: 60px;
+    }
+    
+
+    .cont-img{
+        display: grid;
+        grid-template-rows: repeat(2, 360px);
+        grid-template-columns: repeat(5 ,minmax(30px,1fr));
+        justify-items: center;
+        align-items: center;
+    }
+    .cont__cervezas{
+       width: 200px; 
+       height: 348px; 
+    }
+
+    .cont__cervezas:hover{
+        border-bottom: 2px solid silver;
+    }
+    .cont__cervezas{ 
+        padding: 5px;
+    }
+    .cont__cervezas  a img{
+        width: 220px;
+        height: 220px;
+        object-fit: cover;
+    }
+    /*SECCION-BEBIDAS-FIN*/
+
+    /*carrito*/
+    .cont-carrito{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 600px;
+        text-align: center;
+        border-bottom: 1px solid silver;
+        
+    }
+    .cont-carrito__texto{ 
+        padding: 0px 30px 20px 30px;
+    }
+    .cont-carrito__texto h4{
+        color: #666;
+        margin-bottom: 20px;
+        font-size: 32px;
+        font-weight: inherit;
+    }
+    .cont-carrito__texto p{
+        color: #999;
+        font-weight: inherit;
+        font-size: 18px;
+        line-height: 1.45;
+        margin-bottom: 10px;
+    }
+    .cont-carrito__texto span{
+        font-size: 17px;
+        
+    }
+
+    /*carrito*/
+
+}
+
+
+

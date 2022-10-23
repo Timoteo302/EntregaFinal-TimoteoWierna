@@ -1,0 +1,1168 @@
+@import "variables";
+
+@mixin defecto{
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+@mixin size($width, $height){
+    height: $height;
+    width: $width;
+}
+
+@mixin pad-marg($padding, $margin){
+    padding: $padding;
+    margin: $margin;
+}
+
+
+@mixin flex-1($justifi-content){
+    display: flex;
+    justify-content: $justifi-content;
+    align-items: center;
+}
+
+
+
+*{
+    @include defecto;
+}
+
+a{
+    text-decoration: none;
+}
+
+.texto-pr{
+    color: $white;
+    font-size: 9px;
+    text-align: center;
+    background-color: $text333;
+    @include pad-marg(8px,0px );
+    height: 35px;
+}
+
+.header1{
+    background-color: $black;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    z-index: 20;
+    a{
+        text-decoration: none;
+    }
+}
+
+.cont-menu{
+    @include flex-1(space-between);
+    margin: 0 auto;
+    @include size(85%,70px );
+}
+
+.logo{
+    margin: 0px;
+    a{
+        font-size: 1.1em;
+        font-weight: 1000;
+        color: $white;
+        text-decoration: none;
+    }
+}
+
+.buscar-mo{
+    @include flex-1(center);
+    input{
+        @include size(100px,30px );
+        font-size: 14px;
+        border: 1px solid #d7d7d7;
+        border-radius: 4px;
+        outline: none;
+    }
+    input:focus{
+        border: 2px solid #23608f;
+    }
+}
+
+.btn{
+    color: $color-silver !important;
+    right: 0;
+    padding: 4px 4px 4px 4px !important;
+    height: 30px;
+    top: 0;
+    cursor: pointer;
+    left: 80%;
+    border-radius: 4px;
+    border: 1px solid $color-silver;
+    background-color: $white !important;
+    i{
+        font-size: 13px;
+    }
+}
+
+.cart i{
+    font-size: 17px;
+    color: $white;
+    margin-left: 10px;
+}
+
+/*menu hamburguesa*/
+.nav__label{
+    filter: invert(40%);
+    display: block;
+    cursor: pointer;
+    .label-img{
+        width: 22px;
+    }
+}
+
+@import "navBar-menu";
+@import "slider-style";
+
+/*inicio-de-todas-las-img*/
+.container-bebidas{
+    margin-top: 25px;
+    text-align: center;
+    color: $black;
+    a{
+        text-decoration: none;
+    }
+    
+}
+
+.titulo{
+    @include flex-1(center);
+    margin: 10px 0px 15px 0px;
+    font-weight: 100;
+    color: #b9b9b9;
+    font-size: 9px;
+    h2{
+        padding-right: 3px;
+        padding-left: 3px;
+        font-size: 12px;
+        margin-bottom: 0px;
+    }
+
+}
+
+.cont-img__cerveza{
+    display: grid;
+    grid-template-rows: repeat(2, 270px);
+    grid-template-columns: repeat(2 ,minmax(30px,1fr));
+    justify-items: center;
+    align-items: center;
+}
+
+.cont__bebidas{
+    max-width: 280px;
+    padding: 3px; 
+    margin-right: 3px;
+    margin-left: 3px;
+    padding-bottom: 13px;
+    margin-bottom: 5px;
+    /*texto de la bebida*/
+    p , h4{
+        color: $black;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        font-size: 17px;
+    }
+    &:hover{
+        border-bottom: 2px solid silver;
+    }
+    a img{
+        height: 150px;
+        object-fit: cover;
+    }
+}
+.beb-desktop{
+    display: none;
+}
+
+
+
+.textos{
+    display: flex;
+    flex-direction: column;
+    float: left;
+    text-align: start;
+    align-items: flex-start;
+    .precio-viejo{
+        text-align: start;
+        margin-top: 30px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        p{
+            color: #666;
+            text-decoration: line-through;
+            line-height: 0;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        i{
+            color: rgb(4, 247, 53);
+            position: absolute;
+            right: 9px;
+            top: 155px;
+            @include size(36px,36px );
+            border-radius: 50%;
+            text-align: center;
+        }
+    }  
+
+    .precios{
+        @include flex-1(center);
+        text-align: start;
+        float: left; 
+        margin-bottom: 3px;
+        p{
+            font-size: 23px;
+            font-weight: 600;
+            margin: 0px;
+            margin-right: 10px;
+            padding-bottom: 0px;
+        }  
+        span{
+            background-color: $black;
+            color: $white;
+            font-size: 11px;
+            line-height: 0;
+            font-weight: 600;
+            padding: 12px 2px;
+            height: 20px;
+        }
+    }.descripcion span{
+        font-size: 14px;
+        color: #666;
+        line-height: 1.3;
+    }
+
+}
+@import "categorias";
+@import "overflow";
+@import "todas-las-redes";
+@import "footer";
+@import "contacto-pag";
+@import "seccion-compra";
+@import "seccion-nosotros";
+@import "seccion-bebidas";
+@import "carrito";
+
+
+@media screen and (min-width:500px){
+    /*input de busqueda*/
+    .buscar-mo{
+        @include flex-1(center);
+        input{
+            @include size(100px,30px );
+            font-size: 14px;
+            border: 1px solid #d7d7d7;
+            border-radius: 4px;
+            outline: none;
+            width: 230px;
+        }
+        input:focus{
+            border: 2px solid #23608f;
+        }
+    }
+    /*fin input de busqueda*/
+
+    /*slider*/
+    .container-slider{
+        @include size(100%,250px );
+        min-width: 300px;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        z-index: 10;
+        .slider{
+            display: flex;
+            @include size(300%,250px );
+            margin-left: -100%;
+        }
+        .slider__section{
+            @include size(300%,250px );
+        }
+        .slider__img{
+            display: block;
+            width: 100%;
+            object-fit: cover;
+            height: 250px;
+        }
+    }
+    /*fin-slider*/
+
+
+
+    /*inicio-de-todas-las-img------------*/ /*PRIMEROOOOOOOOOOOO*/
+    .container-bebidas{
+    text-align: center;
+    color: $black;
+    
+
+    a{
+        text-decoration: none;
+    }
+    }
+    .beb-desktop{
+        display: none;
+    }
+    .titulo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 13px;
+        margin: 10px 0px 25px 0px;
+        font-weight: 100;
+        h2{
+            font-size: 15px;
+            font-weight: 600;
+            padding-right: 6px;
+            margin-bottom: 0px;
+        }
+
+    }
+
+
+    .cont-img__cerveza{
+        display: grid;
+        grid-template-rows: repeat(2, 330px);
+        grid-template-columns: repeat(2 ,minmax(30px,1fr));
+        justify-items: center;
+        align-items: center;
+        .cont__bebidas{
+            padding: 10px; 
+            margin-right: 10px;
+            margin-left: 10px;
+            border: none;
+            padding: 0px;
+            max-width: 280px;
+            position: relative;
+                /*texto de la bebida*/
+            p , h4{
+                color: $black;
+                padding: 0px;
+                margin: 0px;
+                font-size: 17px;
+            }
+
+            &:hover{
+                border-bottom: 2px solid silver;
+            }
+            a img{
+                @include size(224px,224px );
+                object-fit: cover;
+            }
+            
+            
+        }
+    }
+    .textos{
+        display: flex;
+        flex-direction: column;
+        float: left;
+        text-align: start;
+        align-items: flex-start;
+        .precio-viejo{
+            text-align: start;
+            margin-top: 30px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            p{
+                color: #666;
+                text-decoration: line-through;
+                line-height: 0;
+                margin-bottom: 10px;
+                font-size: 14px;
+            }
+            i{
+                color: rgb(4, 247, 53);
+                position: absolute;
+                right: 9px;
+                top: 155px;
+                @include size(36px,36px );
+                border-radius: 50%;
+                text-align: center;
+            }
+        }  
+    
+        .precios{
+            @include flex-1(center);
+            text-align: start;
+            float: left; 
+            margin-bottom: 3px;
+            p{
+                font-size: 23px;
+                font-weight: 600;
+                margin: 0px;
+                margin-right: 10px;
+                padding-bottom: 0px;
+            }  
+            span{
+                background-color: $black;
+                color: $white;
+                font-size: 11px;
+                line-height: 0;
+                font-weight: 600;
+                padding: 12px 2px;
+                height: 20px;
+            }
+        }.descripcion span{
+            font-size: 14px;
+            color: #666;
+            line-height: 1.3;
+        }
+    
+    }
+
+    /*todas-las-redes*/
+    .final{
+        .container {
+            h4{
+                font-size: 18px;
+                padding: 12px 0px 5px 0px;
+                font-weight: 550;
+            }
+            .loga{
+                font-size: 22px;
+            }
+        }
+        
+    }
+    .cont__texto , .cont__texto2{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        ul li{
+            font-size: 16px;
+        }
+        
+    }
+    
+    /*todas-las-redes*/
+    
+}
+
+
+
+/*mediaqueris*/
+@media screen and (min-width:768px){
+    .nav__label{
+        display: none;
+    }
+    
+    .header1{
+        display: none;
+    }
+
+    /*nav2-inicio-nombre-de-las-bebidas*/
+    .nav-cont2{
+        display: flex;
+        padding-top: 85px;
+        padding-right: 0px;
+        margin-bottom: 2px;
+        justify-content: center;
+        text-align: center;
+    }
+    .nav__ul{
+        padding-bottom: 5px;
+        padding-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .nav__items{
+        line-height: 22px;
+        border-radius: 10px;
+        border: 2px solid $black;
+        @include size(90px,25px );
+        font-size: 12px;
+        background-color: $black;
+        a{
+            color: $white;
+        }
+        :hover{
+            transform: scale(1.1);
+            transition: transform .2s;
+        }
+    }
+    .item1:hover{
+        background-image: url(../assets/cerveza.png);
+        background-position: center;
+        background-size: cover;
+    }
+
+    .item2:hover{
+        background-image: url(../assets/coca.png);
+        background-position: center;
+        background-size: cover;
+    }
+    .item3:hover{
+        background-image: url(../assets/descarga.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+
+    .item4:hover{
+        background-image: url(../assets/descarga3.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    .item5:hover{
+        background-image: url(../assets/descarga4.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    .item6:hover{
+        background-image: url(../assets/descarga5.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    /*fin-de-inicio-nav*/
+
+        /*header2-desktop*/
+
+        .header2{
+            display: block;
+            background-color: $black;
+            width: 100%;
+            min-height: 70px;
+            
+            .texto-pr{
+                
+                color: $white;
+                font-size: 10px;
+                text-align: center;
+                background-color: #333333;
+                padding-top: 5px;
+                margin: 0px;
+                text-align: center;
+                @include flex-1(center);
+                
+            }
+            .logo2{
+                font-size: 1.4em;
+                padding-bottom: 5px;
+                margin-left: 40px;
+                font-weight: 1000;
+                padding: 3px;
+                color: $white;
+                p{
+                    border-bottom: 2px solid $white;
+                    border-radius: 10px;
+                }
+            }
+            
+        }
+        
+        .nav__upp {
+            display: flex;
+            color: $black;
+            background-color: $black;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding-top: 12px;
+            a{
+                text-decoration: none;
+            }
+            .buscar{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                input{
+                    @include size(400px,40px );
+                    padding: 0px 15px;
+                    font-size: 14px;
+                    border: 1px solid #d7d7d7;
+                    border-radius: 4px;
+                    outline: none;
+                    margin-left: 70px;
+            
+                }
+                input:focus{
+                    border: 2px solid #23608f ;
+                }
+            }
+        }
+        .nav__ul li a{
+            text-decoration: none;
+        }
+        
+        nav a{
+            padding: 10px;
+            font-weight: bold;
+            color: $white;
+        }
+        
+        nav a:hover{
+            color: #bfbfbf;
+        }
+       
+        .nav__item{
+            color: $white;
+        }
+    
+        .btn{
+            color: silver;
+            right: 0;
+            height: 40px;
+            top: 0;
+            cursor: pointer;
+            left: 70%;
+            background-color: $white;
+            border-radius: 4px;
+            border: 1px solid silver;
+            i{
+                padding: 5px 5px 5px 5px;
+                line-height: 2;
+            }
+        }
+        .cart i{
+            font-size: 19px;
+        }
+    
+    /*nav2-inicio-nombre-de-las-bebidas*/
+    .nav-cont2{
+        padding: 0px;
+        margin: 0px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        .nav__ul{
+            display: flex;
+            flex-direction: row;
+            .nav__items{
+                margin: 4px;
+            }
+        }
+    }
+    /*fin-de-inicio-nav*/
+    
+    
+    /*inicio-de-todas-las-img------------*/ /*PRIMEROOOOOOOOOOOO*/
+    .container-bebidas{
+    text-align: center;
+    color: $black;
+    a{
+        text-decoration: none;
+    }
+    }
+    .beb-desktop{
+        display: block;
+    }
+    .titulo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 13px;
+        margin: 10px 0px 25px 0px;
+        font-weight: 100;
+        h2{
+            font-size: 15px;
+            font-weight: 600;
+            padding-right: 6px;
+            margin-bottom: 0px;
+        }
+
+    }
+
+
+    .beb-768-des{
+        display: none;
+    }
+
+    .cont-img__cerveza{
+        display: flex;
+        justify-content: center;
+        .cont__bebidas{
+            padding: 10px; 
+            margin-right: 10px;
+            margin-left: 10px;
+            border: none;
+            width: 200px;
+            padding: 0px;
+            position: relative;
+                /*texto de la bebida*/
+            p , h4{
+                color: $black;
+                padding: 0px;
+                margin: 0px;
+                font-size: 17px;
+            }
+
+            &:hover{
+                border-bottom: 2px solid silver;
+            }
+            a img{
+                @include size(224px,224px );
+                object-fit: cover;
+            }
+        }
+    }
+
+
+    .textos{
+        display: flex;
+        flex-direction: column;
+        float: left;
+        text-align: start;
+        align-items: flex-start;
+        width: 180px;
+        padding: 10px;
+        .precio-viejo{
+            text-align: start;
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            p{
+                color: #666;
+                text-decoration: line-through;
+                line-height: 0;
+                margin-bottom: 10px;
+                
+            }
+            i{
+                color: rgb(4, 247, 53);
+                position: absolute;
+                right: 10px;
+                top: 240px;
+                @include size(36px,36px );
+                border-radius: 50%;
+            }
+        }
+        .precios{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: start;
+            float: left;
+            p{
+                font-size: 25px;
+                font-weight: 600;
+                margin-right: 10px;
+            }
+            span{
+                background-color: $black;
+                color: $white;
+                font-size: 11px;
+                line-height: 0;
+                font-weight: 600;
+                padding: 14px 2px;
+                height: 20px;
+            }
+        }
+        .descripcion span{
+            font-size: 14px;
+            color: #666;
+            line-height: 1.3;
+        }
+    }
+
+    /*fin-de-todas-las-img*/
+
+
+    /*incio-de-las-redes----------*/
+
+    .final{
+        display: flex;
+        justify-content: center;
+        text-align: start;
+        padding: 20px 0px;
+        margin-top: 35px;
+        line-height: 24px;
+        a{
+            text-decoration: none;
+        }
+        .cont__iconos a{
+            color: $white;
+            font-size: 25px;
+            margin: 5px 0px 5px 0px;
+            &:hover{
+                border-bottom: 2px solid $white;
+                background-color: none;
+                transition: border-bottom .2s ease-in-out;
+            }
+        }
+        .container h4{
+            padding: 12px 0px 5px 0px;
+            font-weight: 550;
+            text-align: center;
+        }    
+        .cont__texto2{
+            display: grid;
+            grid-template-rows: repeat(1, 100px);
+            grid-template-columns: repeat(2 ,minmax(30px,1fr));
+            justify-items:center;
+            align-items: center;
+            gap: 250px;
+            padding-top: 20px;
+            .texto{
+                border-top: none;
+            }
+            .texto-wpp{
+                font-weight: 100;
+            }
+        }
+    }
+    
+    .cont__texto , .cont__texto2{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 20px;
+        ul li,ul li{
+            font-size: 15px;
+        }
+    }
+    /*fin-del-las-redes*/
+
+        /*SLIDER*/
+
+
+    .principio-uno{
+        display: block;
+        padding: 0px;
+        margin: 0px;
+    }
+        
+    .container-slider{
+        margin: 0px auto;
+        overflow: hidden;
+        position: relative;
+        min-height: 300px;
+        margin-bottom: 40px;
+        .slider{
+            display: flex;
+            @include size(300%,300px );
+            margin-left: -100%;
+            .slider__section{
+                width: 100%;
+                img{
+                    @include size(300%,300px );
+                }
+                .slider__img{
+                    display: block;
+                }
+                
+            }
+        }
+        .slider__btn{
+            position: absolute;
+            @include size(40px,40px );
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 25px;
+            font-weight: bold;
+            font-family: monospace;
+            text-align: center;
+            border-radius: 50%;
+            cursor: pointer;
+            
+        }
+        .slider__btn--left{
+            left: 10px;
+        }
+        
+        .slider__btn--right{
+            right: 10px;
+        }
+    }
+    
+    
+    /*PARTE-DE-LA-PAGINA-'CONTACTO'----------*/
+      /*Contactános*/
+      .contactanos{
+        padding-top: 10px;
+        padding-bottom: 20px;
+        margin: 48px 330px 32px 330px;
+        h4{
+            text-align: start;
+            color: $black;
+            margin: 15px 0px 10px 0px;
+            font-size: 1.4em;
+        }
+        .flex-container{
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            margin: 0px;
+            padding: 0px;
+            flex-wrap: wrap;	
+            .form{
+                width: 500px;
+                color: $black;
+                .form__section{
+                    padding-top: 15px;  
+                    .form__input{
+                        width: 100%;
+                        padding: 15px;
+                        margin: 10px 0;
+                        border: none;
+                        border: 1px solid #9ea2a3;
+                        border-radius: 10px;
+                        &:focus{
+                            outline: none;
+                            background-color: $white;
+                        }
+                    }
+                    .form input[type="submit"]{
+                        background-color: #3283a8;
+                        color: $white;
+                        padding: 10px;
+                        border-radius: 10px;
+                        border: none;
+                        width: 250px;
+                        cursor: pointer;
+                    }
+                    .form input[type="submit"]:hover{
+                        background-color: #236887;
+                    }
+                }
+                textarea{
+                    min-height: 100px;
+                    resize: none;
+                }
+            }
+        }
+    }
+    
+
+
+    /*fin-del-form*/
+    
+    
+    /*comunicar*/
+    .comunicar{
+        margin: 20px 330px 32px 330px;
+        display: flex;
+        justify-content: start;
+        padding: 0px;
+        .container-com h4{
+            margin: 16px 0px 20px 0px;
+            font-size: 1.4em;
+            label{
+                font-size: 14px;
+                color: $color-rgba-50;
+            }
+            p{
+                margin: 3px 0px 24px 0px;
+                font-size: 24px;
+                color: rgb(67, 67, 67);
+            }
+        }
+    }
+
+    /*fin-comunicar*/
+
+    /*FIN-DE-'CONTACTO'.-------------*/
+
+
+    /*SECCION-COMPRA-------------*/
+    /*producto-compra*/
+    .container-compra{
+        padding: 40px 6px 30px 6px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: start;
+        color: $black;
+
+        .compra{
+            padding-top: 70px; 
+            display: flex;
+            flex-direction: row;
+            .compra__img img{
+                @include size(300px,300px );
+            }
+            .compra__texto{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                margin-left: 10px;
+                h3{
+                    font-size: 1.7em;
+                    font-weight: 1000;
+                    padding: 10px 0px 0px 0px;
+                    max-width: 500px;
+                }
+                p{
+                    padding-bottom: 15px;
+                    font-size: 17px;
+                }
+                .botones-mas-menos{
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 10px 0px 10px 0px;
+                    border: 2px solid $black;
+                    padding: 2px;
+                    width: 300px;
+                }
+                .boton-agregar{
+                    
+                    display: flex;
+                    justify-content: center;
+                    .cont__boton{
+                        background-color: #3283a8;
+                        margin-top: 5px;
+                        @include size(300px,40px );
+                        padding: 10px;
+                        font-size: 15px;
+                        font-weight: bold;
+                        border-radius: 10px;
+                        border: 1px solid $black;
+                        .button__texto{
+                            
+                            display: flex;
+                            justify-content: space-between;
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+
+    /*fin-producto-compra*/
+    /*FIN-SECCION.COMPRA---------*/
+
+   /*SECCION-NOSOTROS*/
+    /*nostros*/
+    .container2{
+        margin-top: 0px;
+        color: $black;
+        text-align: center;
+        padding-top: 0px;
+        .nosotros{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            padding: 15px 5px 60px 5px;
+            .cont-nos{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                h1{
+                    font-size: 1.7em;
+                    padding-bottom: 15px;
+                    font-weight: 100;
+                }
+                p{
+                    max-width: 500px;
+                    line-height: 23px;
+                    font-size: 16px;
+                    padding-bottom: 15px;
+                }
+            }
+            .nos__img img{
+                @include size(400px,350px );
+                object-fit: cover;
+                margin-left: 40px;
+            }
+        }
+    }
+
+    /*fin-nosotros*/
+    /*FIN-SECCION-NOSOTROS*/
+
+    
+    /*SECCION-BEBIDAS*/
+
+     /*productos*/
+     .container-productos{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        color: $black;
+        padding: 50px;
+        margin-top: 20px;
+        padding-top: 0px;
+        margin-bottom: 60px;
+        .cont-img{
+            display: grid;
+            grid-template-rows: repeat(2, 360px);
+            grid-template-columns: repeat(5 ,minmax(30px,1fr));
+            justify-items: center;
+            align-items: center;
+            gap: 10px;
+            .cont__cervezas{
+                width: 200px; 
+                height: 348px; 
+                padding: 5px;
+                border: none;
+                box-shadow: none;
+                a img{
+                    width: 220px;
+                    height: 220px;
+                    object-fit: cover;
+                }
+                &:hover{
+                    border-bottom: 2px solid silver;
+                }
+            }
+        }
+    }
+    
+    /*SECCION-BEBIDAS-FIN*/
+
+     /*carrito*/
+     .cont-carrito{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 600px;
+        text-align: center;
+        border-bottom: 1px solid silver;
+        .cont-carrito__texto{ 
+            padding: 0px 30px 20px 30px;
+            h4{
+                color: #666;
+                margin-bottom: 20px;
+                font-size: 32px;
+                font-weight: inherit;
+            }
+            p{
+                color: #999;
+                font-weight: inherit;
+                font-size: 18px;
+                line-height: 1.45;
+                margin-bottom: 10px;
+            }
+            span{
+                font-size: 17px;
+                
+            }
+        }
+    }
+
+    /*fin--carrito*/
+
+    /*seccion-slide-categorias*/
+        
+        .cat-img:hover{
+            transform: translateY(-20px);
+            transition: transform .4s ease-in-out;
+        }
+        
+    }
+    /*fin-slide-categorias*/
+
+
+   
+// }
+
+@media screen and (min-width:1000px){
+    .beb-768-des{
+        display: block;
+    }
+
+    .categorias{
+        overflow: hidden;
+    }
+}

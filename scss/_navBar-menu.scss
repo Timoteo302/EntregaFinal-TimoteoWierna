@@ -1,0 +1,42 @@
+@import "variables";
+
+
+.nav__menu{
+    /*parte para que aparezca y desaparezca el menu*/
+    position: fixed;
+    top: 105px;
+    bottom: 0;
+    background-color: $black ;
+    border-top: 2px solid $text333;
+    width: 100%;
+    height: 40%;
+    left: 0;
+    flex-direction: column;
+    align-items: flex-end;
+    /* clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 0);
+    transition: clip-path 0.4s ease-out; */
+    transform: translatex(100%); 
+    transition: transform 0.5s;
+    border-radius: 6px;
+    
+}
+
+.nav__input:checked + .nav__menu{
+    /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); */
+    transform: translateX(0%);
+}
+.nav__input{
+    display: none;
+}
+
+.nav__item{
+    display: flex;
+    flex-direction: column;
+    padding: 15px 0px 9px 8px;
+    width: 100%;
+    color: $white;
+}
+
+.header2{
+    display: none;
+}

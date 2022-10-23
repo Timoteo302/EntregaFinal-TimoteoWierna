@@ -1,0 +1,33 @@
+.categorias{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    h2{
+        text-align: center;
+        font-size: 17px;
+        margin: 20px 0px 15px 0px;
+        font-weight: 300;
+    }
+    .cont-categorias{
+        text-align: center;
+        display: flex;
+        align-items: center;
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
+    .cat-cont{
+        display: flex;
+    }
+    .cat-img{
+        width: 280px;
+        height: 400px;
+        padding: 0px 5px;
+        img{
+            width: 290px;
+            height: 400px;
+            object-fit: cover;
+        }
+    }
+    
+    
+}

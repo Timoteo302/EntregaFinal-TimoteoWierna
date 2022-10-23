@@ -1,0 +1,64 @@
+@import "variables";
+
+@mixin size($width, $height){
+    height: $height;
+    width: $width;
+}
+
+@mixin pad-marg($padding, $margin){
+    padding: $padding;
+    margin: $margin;
+}
+
+
+@mixin flex-1($justifi-content){
+    display: flex;
+    justify-content: $justifi-content;
+    align-items: center;
+}
+
+
+/*SECCION-NOSOTROS*/
+/*contamos-sobre-nosotros*/
+.container2{
+    margin-top: 110px;
+    color: $black;
+    
+}
+.nosotros{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    padding: 15px 10px 15px 10px;
+    .cont-nos {
+        h1{
+            font-size: 1.4em;
+            padding-bottom: 15px;
+            font-weight: 100;
+            text-align: center;
+        }
+        .nos__texto{
+            text-align: start;
+        }
+        p{
+            line-height: 23px;
+            font-size: 15px;
+            padding-bottom: 15px;
+            
+        }
+    }
+    .nos__img img{
+        @include size(300px,300px );
+        object-fit: cover;
+    }
+}
+
+/*fin-nosotros*/
+/*FIN-SECCION-NOSOTROS*/
+
+@media screen and (min-width:768px){
+    .container2{
+        margin-top: 0px;
+    }
+}

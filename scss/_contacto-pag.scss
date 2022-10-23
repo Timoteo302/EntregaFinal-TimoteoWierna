@@ -1,0 +1,98 @@
+@import "variables";
+
+@mixin size($width, $height){
+    height: $height;
+    width: $width;
+}
+
+@mixin pad-marg($padding, $margin){
+    padding: $padding;
+    margin: $margin;
+}
+
+
+@mixin flex-1($justifi-content){
+    display: flex;
+    justify-content: $justifi-content;
+    align-items: center;
+}
+
+
+/*PARTE-DE-LA-PAGINA-'CONTACTO'----------*/
+/*Contactános*/
+.contactanos{
+    padding-bottom: 20px;
+    margin: 0px 10px 0px 10px;
+    margin-top: 140px;
+    h4{
+        text-align: center;
+        color: $black;
+        margin: 15px 0px 10px 0px;
+        font-size: 18px;
+    }
+}
+
+.flex-container{
+    @include flex-1(space-evenly);
+    @include pad-marg(0px,0px );
+    flex-wrap: wrap;	
+    .form{
+        width: 300px;
+        color: $black;
+    }
+    .form__section{
+        padding-top: 15px;  
+    }
+    .form__input{
+        width: 100%;
+        padding: 7px;
+        margin: 5px 0;
+        border: none;
+        border: 1px solid #9ea2a3;   
+        
+    }
+    .form__input:focus{
+        outline: none;
+        background-color: $white;
+    }
+    .form textarea{
+        min-height: 100px;
+        resize: none;
+    }
+    .form input[type="submit"]{
+        background-color: #3283a8;
+        color: $white;
+        padding: 5px;
+        border-radius: 10px;
+        border: none;
+        width: 180px;
+        
+    }
+    .form input[type="submit"]:hover{
+        background-color: #236887;
+    }
+    /*fin-del-form*/
+}
+
+/*comunicar*/
+.comunicar{
+    margin: 0px 20px 0px 20px;
+    padding-left: 0px;
+    display: flex;
+    justify-content: start;
+    .container-com h4{
+        margin: 16px 0px 20px 0px;
+        text-align: start;
+    }
+    .container-com label{
+        font-size: 12px;
+        color: $color-rgba-50;
+    }
+    .container-com p{
+        margin: 3px 0px 24px 0px;
+    }
+}
+
+/*fin-comunicar*/
+
+/*FIN-DE-'CONTACTO'.-------------*/

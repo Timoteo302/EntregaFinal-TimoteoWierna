@@ -1,0 +1,73 @@
+
+@import "variables";
+
+@mixin size($width, $height){
+    height: $height;
+    width: $width;
+}
+
+@mixin pad-marg($padding, $margin){
+    padding: $padding;
+    margin: $margin;
+}
+
+
+@mixin flex-1($justifi-content){
+    display: flex;
+    justify-content: $justifi-content;
+    align-items: center;
+}
+
+
+/*SECCION-BEBIDAS*/
+
+/*productos*/
+.container-productos{
+    @include flex-1(center);
+    text-align: center;
+    color: $black;
+    margin-top: 120px;
+}
+
+.cont-img{
+    display: grid;
+    grid-template-rows: repeat(0, 270px);
+    grid-template-columns: repeat(1 ,minmax(30px,1fr));
+    justify-items: center;
+    align-items: center;
+    .cont__cervezas{ 
+        padding: 3px; 
+        margin-right: 3px;
+        margin-left: 3px;
+        padding-bottom: 13px;
+        margin-bottom: 5px;
+        position: relative;
+        max-width: 270px;
+        border: 1px solid $color-silver;
+        box-shadow: 1px 3px 10px 0px gray;
+        a img{
+            height: 240px;
+            object-fit: cover;
+        }
+        /*texto de la bebida*/
+        p ,h4{
+            color: $black;
+            padding-top: 0px;
+            padding-bottom: 0px;
+            font-size: 17px;
+        }
+        .precios p{
+            font-size: 23px;
+        }
+        .precio-viejo p{
+            color: #666;
+            font-size: 14px;
+        }
+        
+    }
+}
+
+
+/*fin-productos*/
+
+/*SECCION-BEBIDAS-FIN*/
