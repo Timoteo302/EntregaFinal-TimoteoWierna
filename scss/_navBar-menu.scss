@@ -1,6 +1,15 @@
 @import "variables";
 
 
+.cont-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 85%;
+    height: 88px;
+}
+
 .nav__menu{
     /*parte para que aparezca y desaparezca el menu*/
     position: fixed;
@@ -13,8 +22,6 @@
     left: 0;
     flex-direction: column;
     align-items: flex-end;
-    /* clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 0);
-    transition: clip-path 0.4s ease-out; */
     transform: translatex(100%); 
     transition: transform 0.5s;
     border-radius: 6px;
@@ -22,7 +29,6 @@
 }
 
 .nav__input:checked + .nav__menu{
-    /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); */
     transform: translateX(0%);
 }
 .nav__input{
@@ -39,4 +45,30 @@
 
 .header2{
     display: none;
+}
+
+/**/
+.cart i{
+    cursor: pointer;
+    font-size: 17px;
+    color: #fff;
+    margin-left: 10px;
+}
+
+.cart__primera img{
+    width: 20px;
+    filter: invert(1);
+    margin-left: 10px;
+}
+
+.nav__label img{
+    filter: invert(1);
+    width: 30px;
+}
+/**/
+
+.logo a{
+    padding: 3px;
+    border-bottom: 2px solid #fff;
+    border-radius: 10px;
 }

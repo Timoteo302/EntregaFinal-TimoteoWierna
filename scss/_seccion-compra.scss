@@ -20,6 +20,7 @@
 /*SECCION-COMPRA-css*/
 /*producto-compra*/
 .container-compra{
+    margin-top: 15px;
     padding: 40px 6px 30px 6px;
     @include flex-1(center);
     flex-direction: column;
@@ -45,12 +46,22 @@
     }
     .botones-mas-menos{
         display: flex;
+        align-items: center;
         justify-content: space-between;
         margin: 10px 20px 10px 20px;
-        border: 1px solid $black;
+        border: 1px solid rgb(165, 165, 165);
         outline: none;
         padding: 3px;
-        border-radius: 5px;
+        border-radius: 14px;
+
+        button{
+            background-color: rgb(165, 165, 165);
+            border: none;
+            border-radius: 10px;
+            width: 35px;
+            font-size: 19px;
+            padding: 3px;
+        }
     }
 }
 
@@ -59,7 +70,7 @@
     justify-content: center;
     
     .cont__boton{
-        
+        background-color: $blue;
         margin-top: 5px;
         width: 300px;
         height: 40px;
@@ -71,7 +82,8 @@
     .button__texto{
         cursor: pointer;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        
     }
 }
 /*fin-producto-compra*/

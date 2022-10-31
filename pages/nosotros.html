@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/pruebacss.css">
+    <link rel="stylesheet" href="../css/stylecss.css">
     <link rel="stylesheet" href="normalize.css">
     <!--Font-->
     <script src="https://kit.fontawesome.com/145c889cf5.js" crossorigin="anonymous"></script>
@@ -41,13 +41,13 @@
 </head>
 <body>
 
-    
+    <!--nuevo header-->
     <header class="header1">
-        
         <div class="publi">
-            <p class="texto-pr">👉ENVÍOS GRATIS Y SUPER RAPIDOS EN PRODUCTOS MAYORES A $6500👈</p>
+            <p class="texto-pr">👉ENVÍOS GRATIS Y SUPER RAPIDOS EN PRODUCTOS MAYORES A $5500👈</p>
         </div>
-
+        
+    
         <div class="cont-menu">
             
             <p class="logo"><a href="../index.html">After</a></p>
@@ -57,72 +57,61 @@
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </div>
                 <input type="search" placeholder="Buscar productos marcas y ofertas">
+                
+                <!--carrito-->
                 <div class="cart">
-                    <a href="../pages/carrito.html"><i class="fas fa-cart-shopping"></i></a>
+                    <div class="cart__primera">
+                        <img  class="cart__img" src="../assets/shopping.svg" alt="">
+                        <span class="add__notification">0</span>
+                    </div>
                 </div>
             </div>
-
+    
             <nav class="main-nav">
                 
-
+    
                 <label for="menu" class="nav__label">
-                    <img src="../assets/barss.png" alt="barra-navegadora" class="label-img">
+                    <img src="../assets/barss.png" alt="nav-barss" class="label-img">
                 </label>
                 
     
                 <input type="checkbox" id="menu" class="nav__input">
     
                 <div class="nav__menu">
-                    <a href="../pages/seccion-bebidas.html" class="nav__item">Cervezas</a>
-                    <a href="../pages/seccion-bebidas.html" class="nav__item">Sin Alcohol</a>
-                    <a href="../pages/seccion-bebidas.html" class="nav__item">Destilados</a>
-                    <a href="../pages/seccion-bebidas.html" class="nav__item">Vinos</a>
-                    <a href="../pages/seccion-bebidas.html" class="nav__item">Snacks</a>
-                    <a href="../pages/seccion-bebidas.html" class="nav__item">Otros</a>
+                    <nav class="nav__menu-container">
+                        <a href="../pages/seccion-bebidas.html" class="nav__item  item1">Cervezas</a>
+                        <a href="../pages/seccion-bebidas.html" class="nav__item  item2">Sin Alcohol</a>
+                        <a href="../pages/seccion-bebidas.html" class="nav__item  item3">Destilados</a>
+                        <a href="../pages/seccion-bebidas.html" class="nav__item  item4">Vinos</a>
+                        <a href="../pages/seccion-bebidas.html" class="nav__item  item5">Snacks</a>
+                        <a href="../pages/seccion-bebidas.html" class="nav__item  item6">Otros</a>
+                    </nav>
                 </div>
     
     
             </nav> 
-        </div>   
+        </div> 
     </header>
+    <!--fin de nuevo header--> 
 
 
-    <!--header-2-responsive- desktop-->
-    <header class="header2">
-        <p class="texto-pr">👉ENVÍOS GRATIS Y SUPER RAPIDOS EN PRODUCTOS MAYORES A $6500👈</p>
-        <div class="nav__upp">
-           
-             <a href="../index.html" class="logo2">
-                <p class="logo2">After</p>
-            </a>
-        
-           
-            <nav class="buscar">
-                <input type="search" placeholder="Buscar productos marcas y ofertas">
-                <div class="btn">
-                    <i class="fa-solid fa-magnifying-glass"></i>
+        <!--CART-SHOPPING-->
+       <section>
+        <div class="cart-modal">
+            <p class="title">Carrito</p>
+            <div class="cart-container">
+                <div class="cart-details">
+                    <img class="cart-image" src="../assets/bebidas/pack-corona.jpg" alt="imagen-bebida">
+                    <div>
+                        <p class="cart-product">Corona Pack 6 310ml</p>
+                        <p class="cart-price">$350 x2 = <span>$700</span></p>
+                    </div>
+                    <img class="cart-delete" src="../assets/delete_remove_bin_icon-icons.com_72400.svg" alt="basurero">
                 </div>
-                <div class="cart">
-                    <a href="../pages/carrito.html"><i class="fas fa-cart-shopping"></i></a>
-                </div>
-            </nav>
-            
+                <button class="cart-checkount">Pagar</button>
+            </div>
         </div>
-        <div class="nav__down">
-            <nav class="nav-cont2">
-                <ul class="nav__ul">
-                    <li class="nav__items  item1"><a href="../pages/seccion-bebidas.html">Cervezas</a></li>
-                    <li class="nav__items  item2"><a href="../pages/seccion-bebidas.html">Sin Alcohol</a></li>
-                    <li class="nav__items  item3"><a href="../pages/seccion-bebidas.html">Destilados</a></li>
-                    <li class="nav__items  item4"><a href="../pages/seccion-bebidas.html">Vinos</a></li>
-                    <li class="nav__items  item5"><a href="../pages/seccion-bebidas.html">Snacks</a></li>
-                    <li class="nav__items  item6"><a href="../pages/seccion-bebidas.html">Otros</a></li>
-                </ul>
-            </nav>
-        </div>
-    
-    </header>
-    <!--fin-header2-responsive-->
+    </section>
 
         <section class="container2">
             <div class="nosotros">
@@ -198,13 +187,20 @@
         </section>
 
         <!--footer-->
-        <section class="pie">
-            <footer class="footer__container">
+        <footer class="pie">
+            <section class="footer__container">
                 <p class="footer__p">&copy;2022proudly-after</p>
-            </footer>
-        </section>
+            </section>
+        </footer>
 
     </div>
+
+
+
+    <!-- <script src="../archivosjs/main.js"></script> -->
+    <script src="../archivosjs/hola.js"></script>
+
+
    
 </body>
 </html>

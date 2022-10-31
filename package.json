@@ -5,7 +5,7 @@
   "main": "\u001b[D\u001b[D\u001b[D\u001b[C\u001b[C",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-css": "node-sass --include-path scss scss/prueba.scss css/pruebacss.css",
+    "build-css": "node-sass --include-path scss scss/style.scss css/stylecss.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
   "author": "",
