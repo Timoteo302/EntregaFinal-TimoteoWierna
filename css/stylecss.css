@@ -685,7 +685,8 @@ a {
   z-index: 10;
   position: absolute;
   top: 110px;
-  right: 6px; }
+  right: 6px;
+  padding: 0 10px; }
 
 .title {
   font-weight: 700;
@@ -693,7 +694,8 @@ a {
   border-bottom: 1px solid #000; }
 
 .cart-container {
-  padding: 20px; }
+  padding: 20px;
+  padding-bottom: 10px; }
 
 .cart-details {
   display: flex;
@@ -720,6 +722,7 @@ a {
   cursor: pointer; }
 
 .cart-checkount {
+  text-align: center;
   padding: 10px;
   background-color: #09fc09;
   width: 100%;

@@ -297,6 +297,7 @@ a{
     position: absolute;
     top: 110px;
     right: 6px;
+    padding: 0 10px;
 }
 .title{
     font-weight: 700;
@@ -306,6 +307,7 @@ a{
 
 .cart-container{
     padding: 20px;
+    padding-bottom: 10px;
 }
 
 .cart-details{
@@ -336,6 +338,7 @@ a{
     cursor: pointer;
 }
 .cart-checkount{
+    text-align: center;
     padding: 10px;
     background-color: rgb(9, 252, 9);
     width: 100%;
@@ -343,6 +346,8 @@ a{
     border: none;
     cursor: pointer;
 }
+
+
 /*FIN-CART-SHOPPING*/
 
 

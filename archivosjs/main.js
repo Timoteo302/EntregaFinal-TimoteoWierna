@@ -48,7 +48,6 @@ addToCart.addEventListener('click', ()=>{
 
 
 
-
 //mostrar el modal del carrito.
 
 const cartIconBtn = document.querySelector(".cart__primera");
@@ -78,6 +77,9 @@ function deleteProduct(){
 }
 
 
+
+
+
 function drawProductInModal(){
 
     productContainer.innerHTML = `
@@ -89,9 +91,20 @@ function drawProductInModal(){
         </div>
         <img class="cart-delete" src="../assets/delete_remove_bin_icon-icons.com_72400.svg" alt="basurero">
     </div>
-    <button class="cart-checkount">Pagar</button>`
+    <div class="cart-checkount">Pagar</div>
+    `
     
     deleteProduct();
     let priceModal = document.querySelector(".cart-price");
     priceModal.innerHTML = `$350 x${lastValue} <span>$${lastValue*350}</span>`
+
+    const pagar = document.querySelector(".cart-checkount");
+    pagar.addEventListener("click", ()=>{
+    alert("Pago realizado");
+    productContainer.innerHTML = `<p class="cart-empty">Tu carrito está vacío</p>`;
+    lastValue = 0;
+    cartNotification.innerText = lastValue;
+    })
 }
+
+
