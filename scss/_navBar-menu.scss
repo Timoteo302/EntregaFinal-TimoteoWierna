@@ -7,29 +7,27 @@
     align-items: center;
     margin: 0 auto;
     width: 85%;
-    height: 88px;
+    height: 75px;
 }
 
 .nav__menu{
     /*parte para que aparezca y desaparezca el menu*/
     position: fixed;
-    top: 105px;
+    top: 110px;
     bottom: 0;
-    background-color: $black ;
-    border-top: 2px solid $text333;
+    background-color: $color-defecto-pag ;
+    border-top: 1px solid $text333;
     width: 100%;
-    height: 40%;
+    height: 36%;
     left: 0;
-    flex-direction: column;
-    align-items: flex-end;
     transform: translatex(100%); 
     transition: transform 0.5s;
-    border-radius: 6px;
+    border-radius: 2px;
     
 }
 
 .nav__input:checked + .nav__menu{
-    transform: translateX(0%);
+    transform: translateX(35%);
 }
 .nav__input{
     display: none;

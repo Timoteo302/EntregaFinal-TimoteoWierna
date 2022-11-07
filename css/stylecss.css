@@ -22,7 +22,7 @@ a {
   height: 35px; }
 
 .header1 {
-  background-color: #000;
+  background-color: #d200ab;
   position: fixed;
   width: 100%;
   top: 0px;
@@ -55,23 +55,25 @@ a {
     width: 100px;
     font-size: 14px;
     border: 1px solid #d7d7d7;
-    border-radius: 4px;
+    border-radius: 1px;
     outline: none; }
   .buscar-mo input:focus {
     border: 2px solid #23608f; }
 
 .btn {
-  color: #c0c0c0 !important;
+  color: #c0c0c0;
   right: 0;
-  padding: 4px 4px 4px 4px !important;
+  padding: 4px 4px 4px 4px;
   height: 30px;
   top: 0;
   cursor: pointer;
   left: 80%;
   border-radius: 4px;
   border: 1px solid #c0c0c0;
-  background-color: #fff !important; }
+  background-color: #fff; }
   .btn i {
+    display: grid;
+    align-content: center;
     font-size: 13px; }
 
 .cart i {
@@ -88,32 +90,215 @@ a {
   .nav__label .label-img {
     width: 22px; }
 
+.container-bot {
+  display: none;
+  width: 280px;
+  border-radius: 30px;
+  position: fixed;
+  left: 15px;
+  bottom: 170px;
+  background-color: #fff;
+  box-shadow: 2px 4px 13px #000;
+  z-index: 999999;
+  /*parte-de-arriba*/
+  /*parte-del-medio*/
+  /*parte-de-abajo*/ }
+  .container-bot .part-up {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    background-color: #178fff;
+    color: #fff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px; }
+    .container-bot .part-up .up__imgUs {
+      padding: 13px;
+      border: 2px solid #77a026;
+      background-color: #a7dc3a;
+      border-radius: 50%; }
+    .container-bot .part-up .up__close {
+      cursor: pointer;
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-weight: bold;
+      padding: 6px; }
+  .container-bot .part-mid {
+    height: 300px;
+    width: 100%;
+    font-size: 15px;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    overflow-x: hidden;
+    padding: 10px 4px 0px 4px; }
+    .container-bot .part-mid p {
+      max-width: 270px;
+      margin-bottom: 10px;
+      position: relative;
+      padding: 10px 10px;
+      border-radius: 25px; }
+    .container-bot .part-mid .receive-text {
+      margin-left: 10px;
+      align-self: flex-start;
+      border: 1px solid #969696; }
+    .container-bot .part-mid .message-send {
+      margin-right: 10px;
+      display: flex;
+      align-self: flex-end;
+      background-color: #178fff;
+      color: #fff; }
+  .container-bot .part-down {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 3px 15px 3px; }
+    .container-bot .part-down .message {
+      border: none;
+      height: 50px;
+      resize: none;
+      font-size: 14px;
+      width: 260px;
+      outline: none; }
+    .container-bot .part-down .send {
+      background-color: #178fff;
+      border: none;
+      border-radius: 60px;
+      padding: 10px;
+      cursor: pointer; }
+      .container-bot .part-down .send i {
+        line-height: 1;
+        color: #fff; }
+
+.chat-button {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: #178fff;
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  z-index: 10000; }
+  .chat-button i {
+    color: #fff;
+    position: absolute;
+    bottom: 18px;
+    left: 13px;
+    font-size: 26px; }
+
+.hide {
+  display: none; }
+
+.hide-cont {
+  display: block; }
+
+@media screen and (min-width: 768px) {
+  .container-bot .part-mid {
+    height: 400px; } }
+
+.modal-oferta {
+  position: fixed;
+  top: 10%;
+  left: 4%;
+  z-index: 999;
+  width: 300px; }
+
+.modal-box {
+  padding: 20px;
+  text-align: center;
+  background-color: #000;
+  color: #fff; }
+  .modal-box a {
+    color: #fff;
+    text-decoration: none; }
+  .modal-box h2 {
+    font-size: 27px;
+    font-weight: bold;
+    margin: 22px 0px 10px 0px;
+    text-transform: uppercase; }
+  .modal-box h3 {
+    font-size: 20px;
+    font-weight: 100;
+    text-transform: uppercase; }
+  .modal-box .top {
+    margin-top: 10px;
+    font-size: 14px; }
+  .modal-box .down {
+    font-size: 12px;
+    font-weight: 100; }
+
+.cont__form {
+  display: flex;
+  flex-direction: column; }
+  .cont__form .input__mail {
+    border: 1px solid #fff;
+    outline: none;
+    border-radius: 4px;
+    padding: 11px 4px;
+    width: 96%;
+    font-size: 15px;
+    margin: 3px; }
+    .cont__form .input__mail:focus {
+      border: 2px solid #006eff; }
+  .cont__form .input__submit {
+    border: 1px solid #5eb130;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 14px;
+    margin: 12px 0px 9px 0px;
+    background-color: #5eb130;
+    font-weight: 300;
+    width: 100%;
+    height: 55px;
+    letter-spacing: 2px;
+    cursor: pointer; }
+    .cont__form .input__submit:hover {
+      background-color: #fff;
+      color: #000;
+      transition: all .4s; }
+
+.close {
+  position: absolute;
+  z-index: 101;
+  right: 15px;
+  top: 0;
+  font-size: 20px;
+  padding: 5px; }
+
+.form__out {
+  color: #5eb130;
+  font-size: 17px;
+  margin: 40px 0px 40px 0px;
+  text-align: center; }
+
+.mostrar {
+  display: none; }
+
 .cont-menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
   width: 85%;
-  height: 88px; }
+  height: 75px; }
 
 .nav__menu {
   /*parte para que aparezca y desaparezca el menu*/
   position: fixed;
-  top: 105px;
+  top: 110px;
   bottom: 0;
-  background-color: #000;
-  border-top: 2px solid #333333;
+  background-color: #d200ab;
+  border-top: 1px solid #333333;
   width: 100%;
-  height: 40%;
+  height: 36%;
   left: 0;
-  flex-direction: column;
-  align-items: flex-end;
   transform: translatex(100%);
   transition: transform 0.5s;
-  border-radius: 6px; }
+  border-radius: 2px; }
 
 .nav__input:checked + .nav__menu {
-  transform: translateX(0%); }
+  transform: translateX(35%); }
 
 .nav__input {
   display: none; }
@@ -209,14 +394,13 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10px 0px 15px 0px;
-  font-weight: 100;
-  color: #b9b9b9;
-  font-size: 9px; }
+  margin: 10px 0px 15px 0px; }
   .titulo h2 {
+    color: rgba(0, 0, 0, 0.55);
+    font-weight: 300;
     padding-right: 3px;
     padding-left: 3px;
-    font-size: 12px;
+    font-size: 15px;
     margin-bottom: 0px; }
 
 .cont-img__cerveza {
@@ -363,7 +547,7 @@ a {
   margin-top: 35px;
   text-align: start;
   line-height: 24px;
-  background-color: #000; }
+  background-color: #d200ab; }
   .final a {
     text-decoration: none; }
   .final h4 {
@@ -406,7 +590,7 @@ a {
 /*fin-del-las-redes*/
 /*footer*/
 .pie {
-  background-color: #000;
+  background-color: #d200ab;
   display: flex;
   justify-content: center; }
 
@@ -785,12 +969,10 @@ a {
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 13px;
-    margin: 10px 0px 25px 0px;
-    font-weight: 100; }
+    margin: 10px 0px 25px 0px; }
     .titulo h2 {
-      font-size: 15px;
-      font-weight: 600;
+      font-size: 26px;
+      font-weight: 300;
       padding-right: 6px;
       margin-bottom: 0px; }
   .cont-img__cerveza {
@@ -887,6 +1069,14 @@ a {
 
 /*mediaqueris*/
 @media screen and (min-width: 768px) {
+  /*modal oferta*/
+  .modal-oferta {
+    position: fixed;
+    top: 10%;
+    left: 5%;
+    z-index: 999;
+    width: 500px; }
+  /*fin modal oferta*/
   .cart-modal {
     display: none;
     margin-top: 45px;
@@ -942,9 +1132,10 @@ a {
     flex-direction: row;
     align-items: center;
     bottom: 0;
-    background-color: #000;
+    background-color: #d200ab;
     width: 100%;
     height: 48px;
+    top: 105px;
     left: 0;
     border: none;
     border-radius: 0px;
@@ -1007,6 +1198,9 @@ a {
     .btn i {
       padding: 5px 5px 5px 5px;
       line-height: 2; }
+  .btn i {
+    display: grid;
+    align-content: center; }
   .cart i {
     font-size: 19px; }
   /*inicio-de-todas-las-img------------*/
@@ -1023,12 +1217,11 @@ a {
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 13px;
     margin: 10px 0px 25px 0px;
     font-weight: 100; }
     .titulo h2 {
-      font-size: 15px;
-      font-weight: 600;
+      font-size: 26px;
+      font-weight: 300;
       padding-right: 6px;
       margin-bottom: 0px; }
   .beb-768-des {
