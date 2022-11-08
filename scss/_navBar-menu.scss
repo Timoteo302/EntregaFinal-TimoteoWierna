@@ -18,7 +18,7 @@
     background-color: $color-defecto-pag ;
     border-top: 1px solid $text333;
     width: 100%;
-    height: 36%;
+    height: 260px;
     left: 0;
     transform: translatex(100%); 
     transition: transform 0.5s;
@@ -41,9 +41,6 @@
     color: $white;
 }
 
-.header2{
-    display: none;
-}
 
 /**/
 .cart i{
@@ -54,12 +51,13 @@
 }
 
 .cart__primera img{
-    width: 20px;
+    width: 25px;
     filter: invert(1);
     margin-left: 10px;
 }
 
 .nav__label img{
+    margin-left: 10px;
     filter: invert(1);
     width: 30px;
 }
@@ -69,4 +67,5 @@
     padding: 3px;
     border-bottom: 2px solid #fff;
     border-radius: 10px;
+    margin-right: 15px;
 }
