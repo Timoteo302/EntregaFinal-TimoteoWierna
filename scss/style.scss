@@ -81,8 +81,8 @@ a{
         font-size: 14px;
         outline: none;
         border: none;
-        border-bottom-right-radius: 2px;
-        border-top-right-radius: 2px;
+        // border-bottom-right-radius: 2px;
+        // border-top-right-radius: 2px;
     }
     input:focus{
         border: 2px solid #23608f;
@@ -707,12 +707,12 @@ a{
         display: flex;
         justify-content: center;
         align-items: center;
-    }
-    .buscar-mo input{
-        width: 500px;
-        height: 40px;
-        font-size: 14px;
-
+        input{
+            width: 500px;
+            height: 40px;
+            font-size: 14px;
+    
+        }
     }
 
     .cart i{
