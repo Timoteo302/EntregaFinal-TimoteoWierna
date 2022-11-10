@@ -99,7 +99,7 @@ a{
     border-bottom-left-radius: 2px;
     border-top-left-radius: 2px;
     background-color: $white;
-    height: 40px;
+    height: 40px; 
     i{
         margin-top: 9px;
         padding: 0px 6px 0px 6px;
@@ -117,15 +117,7 @@ a{
 
 
 
-/*menu hamburguesa*/
-.nav__label{
-    filter: invert(40%);
-    display: block;
-    cursor: pointer;
-    .label-img{
-        width: 22px;
-    }
-}
+
 @import "botMsj";
 @import "modal-oferta";
 @import "navBar-menu";
@@ -556,7 +548,9 @@ a{
 /*mediaqueris*/
 @media screen and (min-width:768px){
 
-
+    .nav-toggle{
+        display: none;
+    }
     /*modal oferta*/
     .modal-oferta{
         position: fixed;
@@ -582,10 +576,6 @@ a{
     }
 
 
-
-    .nav__label{
-        display: none;
-    }
     
     
     .cont-menu{
@@ -659,11 +649,6 @@ a{
     .nav__menu-container a{
         width: 60px;
     }
-
-    .nav__input , .nav__label{
-        display: none;
-    }
-
 
     .nav__item{
         display: flex;

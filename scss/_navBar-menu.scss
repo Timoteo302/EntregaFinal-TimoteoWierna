@@ -3,15 +3,15 @@
 
 .cont-menu{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-around;
     margin: 0 auto;
     width: 85%;
     height: 75px;
+    align-items: center;
 }
 
 .nav__menu{
-    /*parte para que aparezca y desaparezca el menu*/
+    /*parte del menu*/
     position: fixed;
     top: 110px;
     bottom: 0;
@@ -20,18 +20,12 @@
     width: 100%;
     height: 260px;
     left: 0;
-    transform: translatex(100%); 
+    transform: translateX(100%); 
     transition: transform 0.5s;
     border-radius: 2px;
     
 }
 
-.nav__input:checked + .nav__menu{
-    transform: translateX(35%);
-}
-.nav__input{
-    display: none;
-}
 
 .nav__item{
     display: flex;
@@ -43,29 +37,55 @@
 
 
 /**/
-.cart i{
-    cursor: pointer;
-    font-size: 17px;
-    color: #fff;
-    margin-left: 10px;
+
+.cart__primera{
+    img{
+        width: 25px;
+        filter: invert(1);
+        margin-left: 10px;
+    }
 }
 
-.cart__primera img{
-    width: 25px;
-    filter: invert(1);
-    margin-left: 10px;
+
+.main-nav{
+
+    .bar{
+        display: block;
+        width: 17px;
+        height: 0.5px;
+        margin: 5px auto;
+        transition: all 0.3s;
+        background-color: #fff;
+    }
+    .nav-toggle{
+        cursor: pointer;
+    }
+
 }
 
-.nav__label img{
-    margin-left: 10px;
-    filter: invert(1);
-    width: 30px;
+.open{
+
+    .nav-toggle .bar:nth-child(2){
+        opacity: 0;
+    }
+    .nav-toggle .bar:nth-child(1){
+        transform: translateY(5.5px)
+        rotate(45deg);
+    }
+    .nav-toggle .bar:nth-child(3){
+        transform: translateY(-5.5px)
+        rotate(-45deg);
+    }
 }
-/**/
+
+.openMenu{
+    transform: translateX(35%);
+}
+
 
 .logo a{
     padding: 3px;
     border-bottom: 2px solid #fff;
     border-radius: 10px;
-    margin-right: 15px;
+    margin-right: 5px;
 }
